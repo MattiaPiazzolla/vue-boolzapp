@@ -164,3 +164,22 @@ contacts: [
 
 ]
 
+        
+SCOMPOSIZIONE PROBLEMA
+>Replico della grafica con messaggi del PDF
+    >>Definisco la struttura HTML di base.
+    >>Aggiungi il CSS per differenziare i messaggi inviati e ricevuti.
+>Visualizzazione dinamica della lista contatti
+    >>Creo l'app Vue.
+    >>Inserisco l'array di contatti.
+    >>Utilizzo v-for per mostrare nome e immagine di ciascun contatto.
+        >>>Utilizzo lo stesso ciclo per visualizzare la chat attiva, nell'area chat
+        >>>Aggiungo la funzionalità click al contatto per attivarne la chat attraverso un metodo vue
+>Aggiunta di un messaggio
+    >>Aggiungo un input per i nuovi messaggi usando v-model.
+    >>Implemento "l'invio" di un messaggio utilizzando keydown e il click di un bottone 
+>Risposta automatica dall'interlocutore
+    >>Aggiungo una risposta automatica "ok" dopo un secondo dall'invio di un messaggio utilizzando un setTimeout
+>Ricerca utenti
+    >Aggiungo un input per la ricerca dei contatti.
+    >Verifico con include se il valore inserito è presente nell'array cosi da attivare la visibilità con un ternary operator
