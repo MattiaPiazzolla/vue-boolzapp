@@ -94,7 +94,10 @@
                     <div class="mainMsg overflow-scroll">
                         <!-- ciclo l'oggetto messaggi dell'array e con l'operatore ternario definisco la classe da applicare in base al valore di status   -->
                         <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" >
-                            
+                            <!-- definisco la condizione per applicare la classe dle messaggio inviao o il messaggio ricevuto -->
+                            <div class="g-0 position-relative" :class="message.status === 'sent' ? 'bubbleSent' : 'bubbleRecived'">
+                                
+                            </div>
 
                         </div>
                             
