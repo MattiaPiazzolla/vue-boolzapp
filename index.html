@@ -92,7 +92,13 @@
                         </div>
                     </div>
                     <div class="mainMsg overflow-scroll">
-                        <div class="sentMsg">
+                        <!-- ciclo l'oggetto messaggi dell'array e con l'operatore ternario definisco la classe da applicare in base al valore di status   -->
+                        <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" >
+                            
+
+                        </div>
+                            
+                        <!-- <div class="sentMsg">
                             <div class="bubbleSent g-0 position-relative">
 
                                 <p class="sented p-0 m-0 g-0">Ciao come stai?</p>
@@ -100,12 +106,12 @@
                             </div>
                         </div>
                         <div class="recivedMsg">
-                            <div class="bubbleRecived g-0 position-relative">
+                            <div class=" g-0 position-relative">
 
                                 <p class="recived p-0 m-0 g-0">Bene!</p>
                                 <p class="msgTime">12:00</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="inputMsg d-flex p-2">
                         <button class="btn msgIcons me-2">

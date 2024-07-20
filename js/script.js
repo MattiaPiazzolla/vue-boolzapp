@@ -150,11 +150,11 @@ createApp({
             
             ],
             // DEFINISCO LA CHAT ATTIVA
-            activeChat: 0,
+            activeChat: 5,
         }
         
     },
     methods: {
-        
+    
     },
 }).mount('#app')
