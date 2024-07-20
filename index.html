@@ -49,7 +49,8 @@
                     </div>
                     <div class="contactList">
                         <!-- ciclo gli elementi dell'array con v-for -->
-                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2">
+                         <!-- aggiungo il click per cambiare la chat attiva -->
+                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" @click="clickedChat(index)">
                             <!-- inserisco i dati nelle dovute destinazioni -->
                             <div class="contactImg">
                                 <img :src="contact.avatar" :alt="contact.name+'-avatar'">
