@@ -50,7 +50,8 @@
                     <div class="contactList">
                         <!-- ciclo gli elementi dell'array con v-for -->
                          <!-- aggiungo il click per cambiare la chat attiva -->
-                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" @click="clickedChat(index)">
+                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" 
+                        @click="clickedChat(index)" :class="activeChat === index ? 'activeChat' : ''">
                             <!-- inserisco i dati nelle dovute destinazioni -->
                             <div class="contactImg">
                                 <img :src="contact.avatar" :alt="contact.name+'-avatar'">
@@ -76,7 +77,7 @@
                                 </div>
                                 <div class="contactRight w-100 ms-2 position-relative">
                                     <p class="m-0 nameHeaderMsg">{{ contacts[activeChat].name }}</p>
-                                    <p class="m-0 lastAccessHeader">{{ contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date.split(' ')[0] }}</p>
+                                    <p class="m-0 lastAccessHeader">Ultimo accesso {{ contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date.split(' ')[0] }}</p>
                                 </div>
                             </div>
                         </div>

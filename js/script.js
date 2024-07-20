@@ -151,6 +151,8 @@ createApp({
             ],
             // DEFINISCO LA CHAT ATTIVA
             activeChat: 0,
+            // DEFINISCO UN VARIABILE, NELLA QUALE ANDRO A PUSHARE COME MESSAGGIO 
+            newMsg: null,
         }
         
     },
