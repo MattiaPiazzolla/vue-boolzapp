@@ -168,6 +168,14 @@ body{
     color: rgba(152, 152, 152, 0.5);
 }
 
+/* METODO PER AGGIUNGERE ... IN TESTI CHE SUPERANO X LUNGHEZZA (TROVATO SU INTERNER) */
+.lastMsgContactList {
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 /* MESSAGE WINDOW */
 .contactImgHeader img{
     height: 50px;

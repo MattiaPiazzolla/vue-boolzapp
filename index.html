@@ -50,13 +50,16 @@
                     <div class="contactList">
                         <!-- ciclo gli elementi dell'array con v-for -->
                         <div v-for="(contact, index) in contacts" class="contactX d-flex p-2">
+                            <!-- inserisco i dati nelle dovute destinazioni -->
                             <div class="contactImg">
-                                <img src="./img/avatar_1.jpg" alt="">
+                                <img :src="contact.avatar" :alt="contact.name+'-avatar'">
                             </div>
                             <div class="contactRight w-100 ms-2 position-relative">
-                                <p class="m-0 nameContactList">Michele</p>
-                                <p class="m-0 lastMsgContactList">Ultimo messaggio inviato</p>
-                                <p class="lastAccessContactList position-absolute">12:00</p>
+                                <p class="m-0 nameContactList">{{ contact.name }}</p>
+                                <!-- trovato a tentativi, chiedi se c'è un metodo più semplice -->
+                                <p class="m-0 lastMsgContactList">{{ contact.messages[contact.messages.length - 1].message}}</p>
+                                <!-- come posso gestire meglio la data?  -->
+                                <p class="lastAccessContactList position-absolute">{{ contact.messages[contact.messages.length - 1].date.split(' ')[0] }}</p>
                             </div>
                         </div>
                         
