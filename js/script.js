@@ -161,7 +161,9 @@ createApp({
         clickedChat(index){
             this.activeChat = index;
         },
+        // FUNZIONE PER INVIARE MESSAGGI
         sendNewMsg(){
+            // DATA ATTUALE (SOLUZIONE TROVATA SU INTERNER, ESISTE QUALCOSA DI PIÙ PRATICO)
             let currentdate = new Date(); 
             let datetime = currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
@@ -169,19 +171,20 @@ createApp({
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
-            console.log(datetime); // 17.6.2022
             if (this.newMsg != null){
                 // PUSHO IL NUOVO MESSAGGIO NELLL'ARRAY DENTRO L'ARRAY
                 this.contacts[this.activeChat].messages.push({message:this.newMsg, status: 'sent', date:`${datetime}`});
                 // RESETTO IL CAMPO TESTO UNA VOLTA "INVIATO" IL MESSAGGIO
                 this.newMsg = null;
+                // DEFINISCO UN SETTIMEOUT CHE CHIAMA UNA FUNZIONE DOPO UN SECONDO 
+                setTimeout(() => {
+                    // GENERO IL MESSAGGIO DI RISPOSTA 
+                    this.contacts[this.activeChat].messages.push({message:'Risposta automatica', status: 'received', date:`${datetime}`})
+                }, 1000);
             } else {
 
             }
-            // DEFINISCO UN SETTIMEOUT CHE CHIAMA UNA FUNZIONE DOPO UN SECONDO 
-            setTimeout(() => {
-                this.replyMsg();
-            }, 1000);
         }
     },
+
 }).mount('#app')
