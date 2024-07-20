@@ -148,9 +148,11 @@ createApp({
                     ]
                 },
             
-            ]
-
+            ],
+            // DEFINISCO LA CHAT ATTIVA
+            activeChat: 0,
         }
+        
     },
     methods: {
         

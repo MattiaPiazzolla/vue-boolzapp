@@ -69,12 +69,13 @@
                     <div class="msgHeader d-flex align-items-center justify-content-between">
                         <div class="msgHeaderLeft">
                             <div class="contactMsgHeader d-flex px-2">
+                                <!-- aggiungo le informazioni del contatto della chat attiva (chiamata con un valore definito inizialmente a 0) -->
                                 <div class="contactImgHeader">
-                                    <img src="./img/avatar_1.jpg" alt="">
+                                    <img :src="contacts[activeChat].avatar" alt="">
                                 </div>
                                 <div class="contactRight w-100 ms-2 position-relative">
-                                    <p class="m-0 nameHeaderMsg">Michele</p>
-                                    <p class="m-0 lastAccessHeader">Ultimo messaggio inviato</p>
+                                    <p class="m-0 nameHeaderMsg">{{ contacts[activeChat].name }}</p>
+                                    <p class="m-0 lastAccessHeader">{{ contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date }}</p>
                                 </div>
                             </div>
                         </div>
