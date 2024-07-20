@@ -161,6 +161,15 @@ createApp({
         clickedChat(index){
             this.activeChat = index;
         },
-        
+        sendNewMsg(){
+            if (this.newMsg != null){
+                // PUSHO IL NUOVO MESSAGGIO NELLL'ARRAY DENTRO L'ARRAY
+                this.contacts[this.activeChat].messages.push({message:this.newMsg, status: 'sent', date:'10/01/2020 15:51:00'});
+                // RESETTO IL CAMPO TESTO UNA VOLTA "INVIATO" IL MESSAGGIO
+                this.newMsg = null;
+            } else {
+
+            }
+        }
     },
 }).mount('#app')

@@ -121,12 +121,18 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="inputMsg d-flex p-2">
+                    <div class="inputMsg d-flex p-2 position-relative">
                         <button class="btn msgIcons me-2">
                             <i class="fa-regular fa-face-smile"></i>
                         </button>
                         <!-- dico alla variabile newMsg dove andare a prendere il valore -->
                         <input class="w-100 p-2" type="text" name="" id="" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendNewMsg">
+
+                    <!-- CHIEDI SE ESISTE UN MODO PER FARLO COMPARIRE QUANDO INPUTE È IN FOCUS  -->
+                        <button class="btn position-absolute msgSendBtn d-none">
+                            <i class="fa-regular fa-paper-plane "></i>
+                        </button>
+                        
                         <button class="btn msgIcons ms-2">
                             <i class="fa-regular fas fa-microphone"></i>
                         </button>
