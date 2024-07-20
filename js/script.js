@@ -178,6 +178,10 @@ createApp({
             } else {
 
             }
+            // DEFINISCO UN SETTIMEOUT CHE CHIAMA UNA FUNZIONE DOPO UN SECONDO 
+            setTimeout(() => {
+                this.replyMsg();
+            }, 1000);
         }
     },
 }).mount('#app')
