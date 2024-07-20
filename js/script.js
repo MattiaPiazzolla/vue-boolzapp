@@ -162,9 +162,17 @@ createApp({
             this.activeChat = index;
         },
         sendNewMsg(){
+            let currentdate = new Date(); 
+            let datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+            console.log(datetime); // 17.6.2022
             if (this.newMsg != null){
                 // PUSHO IL NUOVO MESSAGGIO NELLL'ARRAY DENTRO L'ARRAY
-                this.contacts[this.activeChat].messages.push({message:this.newMsg, status: 'sent', date:'10/01/2020 15:51:00'});
+                this.contacts[this.activeChat].messages.push({message:this.newMsg, status: 'sent', date:`${datetime}`});
                 // RESETTO IL CAMPO TESTO UNA VOLTA "INVIATO" IL MESSAGGIO
                 this.newMsg = null;
             } else {
