@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sizecheck{
+    border: 1px solid black;
+}
+
+body{
+    height: 100dvh;
+    width: 100dvw;
+    background-image: repeating-linear-gradient(#429488 0%, #429488 17.5%, #DBDAD5 17.5%, #DBDAD5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* STRUTTURA GENERALE */
+.container-custom{
+    width: 80vw;
+    height: 95vh;
+    background-color: #fff;
+}
+
+.constactList ,
+.msgWindow {
+    height: 95vh;
+}
+
+.profileImg{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.userName {
+    font-size: 13px;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.notificationIcon{
+    background-color: #fff;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A0D8F9;
+    margin: auto;
+    margin-left: 10px;
+    height: 50px;
+}
+.mainNotification{
+    font-size: 15px;
+}
+.subNotification{
+    font-size: 12.5px;
+    text-decoration: underline;
+    color: rgb(152, 152, 152);
+    cursor: pointer;
+}
+.searchName{
+    background-color: #FAFAF8;
+    padding: 5px 10px;
+}
+
+.searchName > input{
+    border-radius: 2.5px;
+    font-size: 12.5px;
+    border: 0.25px solid rgba(211, 211, 211, 0.25);
+}
+
+.inputMsg > input{
+    border-radius: 2.5px;
+    border: 0.25px solid rgba(211, 211, 211, 0.25);
+}
+
+.searchIcon{
+    color: #a0a0a0;
+    width: 15%;
+    background-color: #fff;
+    border-radius: 2.5px;
+    border: 0.25px solid rgba(211, 211, 211, 0.25);
+}
+
+.msgIcons{
+    color: #a0a0a0;
+    width: 7.5%;
+}
+
+.fa-microphone{
+    transition: all .5s;
+}
+
+.fa-microphone:active{
+    color: rgb(0, 220, 0);
+}
+
+
+/* STRUTTURA LISTA CONTATTI */
+.contactListCont{
+    border-right: 0.25px solid rgba(159, 159, 159, 0.3);
+}
+
+.contactListHeader,
+.msgHeader{
+    height: 65px;
+    padding: 5px;
+    background-color: #EAEAEA;
+}
+.iconsHeader{
+    color: #B1B1B1;
+}
+
+/* BANNER NOTIFICHE */
+.notificationBanner{
+    height: 75px;
+    padding: 5px;
+    font-size: 17.5px;
+    background-color: #A0D8F9;
+    display: flex;
+    align-items: center;
+}
+
+/* CONTATTI */
+.contactList{
+    overflow: scroll;
+    height: calc(100% - 187px);
+}
+
+.contactX{
+    border-bottom: 0.25px solid rgba(211, 211, 211, 0.4);
+    cursor: pointer;
+    transition: all .25s;
+
+}
+.contactX:hover{
+    background-color: #f2f2f2; 
+}
+.contactX:active{
+    background-color: #e2e2e2; 
+}
+
+.contactImg img{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A0D8F9;
+    margin-left: 10px;
+    height: 60px;
+}
+.lastAccessContactList{
+    font-size: 11px;
+    color: rgba(152, 152, 152, 0.5);
+    right: 10px;
+    top: 0;
+}
+.lastMsgContactList,
+.lastAccessHeader{
+    font-size: 10px;
+    color: rgba(152, 152, 152, 0.5);
+}
+
+/* MESSAGE WINDOW */
+.contactImgHeader img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.mainMsg{
+    height: calc(100% - 125px);
+    background-image: url(../img/mine.jpg);
+    padding: 15px;
+}
+
+.inputMsg{
+    height: 60px;
+    background-color: #F2EFEA;
+}
+
+
+.bubbleSent{
+    padding: 10px;
+    background-color: #DCF7C0;
+    border-radius: 5px;
+    min-width: 35%;
+}
+.bubbleRecived{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: 35%;
+}
+
+.msgTime{
+    font-size: 10px;
+    color: rgba(152, 152, 152, 0.5);
+    right: 5px;
+    bottom: -15px;
+    position: absolute;
+}
+
+.sentMsg {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.recivedMsg {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .container-custom{
+        width: 100dvw;
+        height: 100dvh;
+    }
+    
+    .constactList ,
+    .msgWindow {
+        height: 100dvh;
+    }
+}
