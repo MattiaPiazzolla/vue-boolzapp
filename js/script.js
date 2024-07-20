@@ -150,7 +150,7 @@ createApp({
             
             ],
             // DEFINISCO LA CHAT ATTIVA
-            activeChat: 5,
+            activeChat: 0,
         }
         
     },

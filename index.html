@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="contactRight w-100 ms-2 position-relative">
                                     <p class="m-0 nameHeaderMsg">{{ contacts[activeChat].name }}</p>
-                                    <p class="m-0 lastAccessHeader">{{ contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date }}</p>
+                                    <p class="m-0 lastAccessHeader">{{ contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date.split(' ')[0] }}</p>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,10 @@
                         <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" >
                             <!-- definisco la condizione per applicare la classe dle messaggio inviao o il messaggio ricevuto -->
                             <div class="g-0 position-relative" :class="message.status === 'sent' ? 'bubbleSent' : 'bubbleRecived'">
-                                
+                                <!-- aggiungo i dati e le classi ai messaggi in base allo status  -->
+                                <p class="p-0 m-0 g-0" :class="message.status === 'sent' ? 'sented' : 'recived'">{{ message.message }}</p>
+                                <!-- soluzione trovata su internet, chiedi se esiste un metodo più efficiente  -->
+                                <p class="msgTime">{{ message.date.split(' ')[1].slice(0, 5) }}</p>
                             </div>
 
                         </div>
