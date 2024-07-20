@@ -160,6 +160,7 @@ createApp({
         // AGGIUNGO IL METODO PER CAMBIARE LA CHAT SELEZIONATA IN BASE AL CLICK 
         clickedChat(index){
             this.activeChat = index;
-        }
+        },
+        
     },
 }).mount('#app')

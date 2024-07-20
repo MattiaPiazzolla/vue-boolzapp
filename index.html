@@ -125,7 +125,8 @@
                         <button class="btn msgIcons me-2">
                             <i class="fa-regular fa-face-smile"></i>
                         </button>
-                        <input class="w-100 p-2" type="text" name="" id="" placeholder="Scrivi un messaggio">
+                        <!-- dico alla variabile newMsg dove andare a prendere il valore -->
+                        <input class="w-100 p-2" type="text" name="" id="" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendNewMsg">
                         <button class="btn msgIcons ms-2">
                             <i class="fa-regular fas fa-microphone"></i>
                         </button>
