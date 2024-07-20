@@ -172,7 +172,7 @@ SCOMPOSIZIONE PROBLEMA
 >Visualizzazione dinamica della lista contatti
     >>Creo l'app Vue.
     >>Inserisco l'array di contatti.
-    >>Utilizzo v-for per mostrare nome e immagine di ciascun contatto.
+        >>>Utilizzo v-for per mostrare nome e immagine di ciascun contatto.
         >>>Utilizzo lo stesso ciclo per visualizzare la chat attiva, nell'area chat
         >>>Aggiungo la funzionalità click al contatto per attivarne la chat attraverso un metodo vue
 >Aggiunta di un messaggio

@@ -20,13 +20,13 @@ body{
 /* STRUTTURA GENERALE */
 .container-custom{
     width: 80vw;
-    height: 95vh;
+    height: 95dvh;
     background-color: #fff;
 }
 
 .constactList ,
 .msgWindow {
-    height: 95vh;
+    height: 95dvh;
 }
 
 .profileImg{
@@ -129,7 +129,7 @@ body{
 /* CONTATTI */
 .contactList{
     overflow: scroll;
-    height: calc(100% - 187px);
+    height: calc(95dvh - 187px);
 }
 
 .contactX{

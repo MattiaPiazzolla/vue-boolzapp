@@ -48,7 +48,8 @@
                         <input class="w-100 p-2" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="contactList">
-                        <div class="contactX d-flex p-2">
+                        <!-- ciclo gli elementi dell'array con v-for -->
+                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2">
                             <div class="contactImg">
                                 <img src="./img/avatar_1.jpg" alt="">
                             </div>
@@ -115,6 +116,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
