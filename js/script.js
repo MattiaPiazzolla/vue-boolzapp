@@ -190,7 +190,10 @@ createApp({
         },
         // DEFINISCO LA FUNZIONE CHE FILTRERA I CONTATTI 
         filterContacts() {
-    
+            // DEFINISCO UN CICLO FOREACH CHE VAGLI I CONTATTI E CONTROLLA SE IL VALORE PASSATO A SEARCHCHAT È INCLUSO NELL'ARRAY DEI NOMI 
+            this.contacts.forEach((contact) => {
+                contact.visible = contact.name.toLowerCase().includes(this.searchChat.toLowerCase());
+            });
             
         }
     
