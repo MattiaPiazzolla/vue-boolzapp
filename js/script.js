@@ -153,6 +153,8 @@ createApp({
             activeChat: 0,
             // DEFINISCO UN VARIABILE, NELLA QUALE ANDRO A PUSHARE COME MESSAGGIO 
             newMsg: null,
+            // DEFINISCO UNA VARIABILE PER LA BARRA DI RICERCA 
+            searchChat: '',
         }
         
     },
@@ -169,7 +171,7 @@ createApp({
                 + (currentdate.getMonth()+1)  + "/" 
                 + currentdate.getFullYear() + " "  
                 + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
+                + currentdate.getMinutes().toString().padStart(2, '0') + ":" 
                 + currentdate.getSeconds();
             if (this.newMsg != null){
                 // PUSHO IL NUOVO MESSAGGIO NELLL'ARRAY DENTRO L'ARRAY
@@ -179,12 +181,17 @@ createApp({
                 // DEFINISCO UN SETTIMEOUT CHE CHIAMA UNA FUNZIONE DOPO UN SECONDO 
                 setTimeout(() => {
                     // GENERO IL MESSAGGIO DI RISPOSTA 
-                    this.contacts[this.activeChat].messages.push({message:'Risposta automatica', status: 'received', date:`${datetime}`})
+                    // è possibile trasfomrala in una funzione esterna?
+                    this.contacts[this.activeChat].messages.push({message:'Ok', status: 'received', date:`${datetime}`})
                 }, 1000);
             } else {
 
             }
+        },
+        searchUser(){
+            
         }
+    
     },
 
 }).mount('#app')
