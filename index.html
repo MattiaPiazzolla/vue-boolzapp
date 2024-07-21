@@ -45,13 +45,16 @@
                         <button class="btn searchIcon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input class="w-100 p-2" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchChat" keyup="">
+                        <!-- aggiungo v-model per inserire il valore in searchchat ed aggiungo l'ascolto all'input  -->
+                        <input class="w-100 p-2" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchChat" @input="filterContacts">
                     </div>
                     <div class="contactList">
                         <!-- ciclo gli elementi dell'array con v-for -->
                          <!-- aggiungo il click per cambiare la chat attiva -->
-                        <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" 
-                        @click="clickedChat(index)" :class="activeChat === index ? 'activeChat' : ''">
+                          <!-- aggiungo la condizione che verifica se visibe è falsa o vera ed applica d-none di conseguenza  -->
+                        <div v-for="(contact, index) in contacts" :key="index" class="contactX d-flex p-2"
+                        @click="clickedChat(index)"
+                        :class="[activeChat === index ? 'activeChat' : '', contact.visible === false ? 'd-none' : '']">
                             <!-- inserisco i dati nelle dovute destinazioni -->
                             <div class="contactImg">
                                 <img :src="contact.avatar" :alt="contact.name+'-avatar'">
@@ -70,7 +73,46 @@
                 <div class="col-12 col-md-7 msgWindow">
                     <div class="msgHeader d-flex align-items-center justify-content-between">
                         <div class="msgHeaderLeft">
+
                             <div class="contactMsgHeader d-flex px-2">
+                                
+                                <!-- aggiungo una funzione extra per la visualizzazione mobile  -->
+                                <button class="btn iconsHeaderBack iconsHeader" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    <i class="fa-solid fas fas fa-angle-left"></i>
+                                </button>
+
+                                <div class="offcanvas offcanvas-start w-100" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                                    <div class="offcanvas-header d-flex flex-column">
+                                        <div class="d-flex w-100 m-2">
+                                            <h2 class=""><span class="booleanblue">Bool</span><span class="booleangreen">zapp</span></h2>
+                                            <button type="button" class="btn-close p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <input class="w-100 p-2" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchChat" @input="filterContacts">
+                                    </div>
+                                    <div class="offcanvas-body h-100">
+                                        <div class="contactList">
+                                            <!-- ciclo gli elementi dell'array con v-for -->
+                                             <!-- aggiungo il click per cambiare la chat attiva -->
+                                            <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" 
+                                            @click="clickedChat(index)" :class="[activeChat === index ? 'activeChat' : '', contact.visible === false ? 'd-none' : '']" data-bs-dismiss="offcanvas" aria-label="Close">
+                                                <!-- inserisco i dati nelle dovute destinazioni -->
+                                                <div class="contactImg">
+                                                    <img :src="contact.avatar" :alt="contact.name+'-avatar'">
+                                                </div>
+                                                <div class="contactRight w-100 ms-2 position-relative">
+                                                    <p class="m-0 nameContactList">{{ contact.name }}</p>
+                                                    <!-- trovato a tentativi, chiedi se c'è un metodo più semplice -->
+                                                    <p class="m-0 lastMsgContactList">{{ contact.messages[contact.messages.length - 1].message}}</p>
+                                                    <!-- come posso gestire meglio la data?  -->
+                                                    <p class="lastAccessContactList position-absolute">{{ contact.messages[contact.messages.length - 1].date.split(' ')[0] }}</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                
                                 <!-- aggiungo le informazioni del contatto della chat attiva (chiamata con un valore definito inizialmente a 0) -->
                                 <div class="contactImgHeader">
                                     <img :src="contacts[activeChat].avatar" alt="">
@@ -140,6 +182,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
 </body>

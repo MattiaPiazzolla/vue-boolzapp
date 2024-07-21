@@ -170,7 +170,7 @@ createApp({
             let datetime = currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
                 + currentdate.getFullYear() + " "  
-                + currentdate.getHours() + ":"  
+                + currentdate.getHours().toString().padStart(2, '0') + ":"  
                 + currentdate.getMinutes().toString().padStart(2, '0') + ":" 
                 + currentdate.getSeconds();
             if (this.newMsg != null){
@@ -188,9 +188,8 @@ createApp({
 
             }
         },
-        searchUser(){
-            
-        }
+    
+     
     
     },
 

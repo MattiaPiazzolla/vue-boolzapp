@@ -243,6 +243,8 @@ body{
 
 
 
+
+
 .msgTime{
     font-size: 10px;
     color: rgba(152, 152, 152, 0.5);
@@ -263,6 +265,22 @@ body{
     margin-bottom: 10px;
 }
 
+/* EXTRA */
+.iconsHeaderBack{
+    display: none;
+}
+
+.booleanblue{
+    color: #001534;
+}
+.booleangreen{
+    color: #01E165;
+}
+
+.hidden{
+    display: none;
+}
+
 @media screen and (max-width:768px) {
     .container-custom{
         width: 100dvw;
@@ -272,5 +290,13 @@ body{
     .constactList ,
     .msgWindow {
         height: 100dvh;
+    }
+    .contactList{
+        height: 100dvh;
+        overflow: visible;
+    }
+
+    .iconsHeaderBack{
+        display: block;
     }
 }
