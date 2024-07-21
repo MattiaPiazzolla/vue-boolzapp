@@ -188,8 +188,11 @@ createApp({
 
             }
         },
+        // DEFINISCO LA FUNZIONE CHE FILTRERA I CONTATTI 
+        filterContacts() {
     
-     
+            
+        }
     
     },
 
