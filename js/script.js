@@ -147,7 +147,25 @@ createApp({
                         },
                     ]
                 },
+                
             
+            ],
+            randomRepMsg: [
+                'Ok',
+                'Certo!',
+                'Va bene',
+                'Non posso farlo ora, scusa',
+                'Ti rispondo dopo',
+                'Ottima idea!',
+                'Ci sto!',
+                'Carbonara',
+                'Sì, assolutamente.',
+                'Ci vediamo più tardi',
+                'A dopo',
+                'Ti faccio sapere',
+                'Gentilissima',
+                'Perfetto, grazie!',
+                '...',
             ],
             // DEFINISCO LA CHAT ATTIVA
             activeChat: 0,
@@ -178,15 +196,22 @@ createApp({
                 this.contacts[this.activeChat].messages.push({message:this.newMsg, status: 'sent', date:`${datetime}`});
                 // RESETTO IL CAMPO TESTO UNA VOLTA "INVIATO" IL MESSAGGIO
                 this.newMsg = null;
+                
+                // CHIAMO LA FUNZIONE PER SCROLLARE ALL'ULTIMO MESSAGGIO 
+                this.scrollToLastMessage();   
+                
                 // DEFINISCO UN SETTIMEOUT CHE CHIAMA UNA FUNZIONE DOPO UN SECONDO 
                 setTimeout(() => {
+                    // GENERO UN NUMERO RANDOM CHE UTILIZZERÒ COME INDEX PER LE MIE RISPOSTE
+                    const randomRepIndex = Math.floor(Math.random() * this.randomRepMsg.length);
                     // GENERO IL MESSAGGIO DI RISPOSTA 
-                    // è possibile trasfomrala in una funzione esterna?
-                    this.contacts[this.activeChat].messages.push({message:'Ok', status: 'received', date:`${datetime}`})
-                }, 1000);
-            } else {
+                    // AGGIUNGO IL MESSAGGIO RANDOM PESCATO DALL'ARRAY SOPRA E VARIABILE CON L'INDEX GENERATO RANDOMICAMENTE 
+                    this.contacts[this.activeChat].messages.push({message:this.randomRepMsg[randomRepIndex], status: 'received', date:`${datetime}`})
+                    // CHIAMO LA FUNZIONE PER SCROLLARE ALL'ULTIMO MESSAGGIO 
+                    this.scrollToLastMessage();   
 
-            }
+                }, 1000);
+            } 
         },
         // DEFINISCO LA FUNZIONE CHE FILTRERA I CONTATTI 
         filterContacts() {
@@ -201,7 +226,21 @@ createApp({
                 // VADO A PRENDERE L'ELEMENTO CHE DEVO ELIMINARE NELLA CHAT ATTIVA E GLI APPLICO SPLICE
                 this.contacts[this.activeChat].messages.splice(index, 1);
             }
-        }
+        },
+
+
+        // SOLUZIONE PER LO SCROLL TROVATA SU INTERNET 
+        scrollToLastMessage() {
+            // CHIAMO IL TIMEOUT PER DARE TEMPO ALLA PAGINA DI AGGIORNARSI 
+            setTimeout(() => {
+                // PACCHETTO INTERNET
+                const lastChildElement =
+                this.$refs.msgContainer.lastElementChild;
+                lastChildElement?.scrollIntoView({
+                behavior: 'smooth',
+            },500)
+      });
+    },
     
     },
 

@@ -136,7 +136,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="mainMsg overflow-scroll">
+                    <!-- riferimento a questo container per lo scroll automatico che mantiene in vista l'ultimo messaggio  -->
+                    <div class="mainMsg overflow-scroll" ref="msgContainer">
                         <!-- ciclo l'oggetto messaggi dell'array e con l'operatore ternario definisco la classe da applicare in base al valore di status   -->
                         <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" >
                             <!-- definisco la condizione per applicare la classe dle messaggio inviao o il messaggio ricevuto -->
@@ -184,7 +185,7 @@
                         <!-- dico alla variabile newMsg dove andare a prendere il valore -->
                         <input class="w-100 p-2" type="text" name="" id="" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendNewMsg">
 
-                        <button v-if="newMsg" class="btn msgIcons ms-2 me-1" @click="sendNewMsg()">
+                        <button v-if="newMsg" class="btn msgIcons ms-2 me-1" @click="sendNewMsg(); scrollToBottom()">
                             <i class="fa-regular fas fa-paper-plane"></i>
                         </button>
                         <button v-else class="btn msgIcons ms-2">
