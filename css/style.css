@@ -279,8 +279,8 @@ body{
 
 .msgMenu{
     position: absolute;
-    right: 0;
-    top: -10%;
+    right: -2.5%;
+    top: -7.5%;
 }
 .btn:active{
     border: none;

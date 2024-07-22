@@ -54,7 +54,8 @@
                           <!-- aggiungo la condizione che verifica se visibe è falsa o vera ed applica d-none di conseguenza  -->
                         <div v-for="(contact, index) in contacts" :key="index" class="contactX d-flex p-2"
                         @click="clickedChat(index)"
-                        :class="[activeChat === index ? 'activeChat' : '', contact.visible === false ? 'd-none' : '']">
+                        :class="activeChat === index ? 'activeChat' : ''"
+                        v-show="contact.visible">
                             <!-- inserisco i dati nelle dovute destinazioni -->
                             <div class="contactImg">
                                 <img :src="contact.avatar" :alt="contact.name+'-avatar'">
