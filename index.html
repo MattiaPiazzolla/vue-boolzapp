@@ -148,7 +148,15 @@
                             <!-- definisco la condizione per applicare la classe dle messaggio inviao o il messaggio ricevuto -->
                             <div class="g-0 position-relative" :class="message.status === 'sent' ? 'bubbleSent' : 'bubbleRecived'">
                                 <!-- aggiungo i dati e le classi ai messaggi in base allo status  -->
-                                <p class="p-0 m-0 g-0" :class="message.status === 'sent' ? 'sented' : 'recived'">{{ message.message }}</p>
+                                 <!-- aggiungo v-if che controlla lo stato del valore edit  -->
+                                 <div v-if="!this.contacts[this.activeChat].messages.edit">
+                                    <!-- se edit è come di default in false, allora il messaggio rimarra invariato -->
+                                     <p class="p-0 m-0 g-0" :class="message.status === 'sent' ? 'sented' : 'recived'">{{ message.message }}</p>
+                                 </div>
+                                 <!-- altrimenti compare l'input di modifica  -->
+                                <div v-else>
+                                    <input type="text" class="form-control bg-transparent border-0" @keyup.enter="editMsg(index)" v-model="message.message">
+                                </div>
                                 <!-- soluzione trovata su internet, chiedi se esiste un metodo più efficiente  -->
                                 <p class="msgTime">{{ message.date.split(' ')[1].slice(0, 5) }}</p>
 
@@ -156,10 +164,11 @@
                                 <div class="dropup-center dropup msgMenu">
                                     <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     </button>
-                                    <ul class="dropdown-menu p-2">
+                                    <ul class="dropdown-menu">
                                         <!-- aggiungo l'ascolto del click per chiamare la funzione per eleminiare il messaggio -->
                                       <li><a class="dropdown-item" @click="deleteMsg(index)">Elimina messaggio</a></li>
-                                      <li><a class="dropdown-item" >Modifica messaggio</a></li>
+                                      <!-- aggiungo il click che chiama il cambio del valore di edit -->
+                                      <li><a class="dropdown-item" @click="editMsg(index)" >Modifica messaggio</a></li>
                                     </ul>
                                   </div>
 
