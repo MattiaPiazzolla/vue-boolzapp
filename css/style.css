@@ -136,7 +136,7 @@ body{
     border-bottom: 0.25px solid rgba(211, 211, 211, 0.4);
     cursor: pointer;
     transition: all .25s;
-
+    display: flex;
 }
 .contactX:hover{
     background-color: #e7e7e7 ; 
@@ -236,12 +236,6 @@ body{
     transform: translateY(-50%);
 }
 
-.msgSendBtn:active .fa-paper-plane{
-    color: rgb(50, 50, 255);
-
-}
-
-
 
 
 
@@ -266,6 +260,14 @@ body{
 }
 
 /* EXTRA */
+.fa-paper-plane{
+    transition: all .25s;
+}
+
+.fa-paper-plane:active{
+    color: rgb(50, 50, 255);
+}
+
 .iconsHeaderBack{
     display: none;
 }

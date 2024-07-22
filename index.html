@@ -52,7 +52,7 @@
                         <!-- ciclo gli elementi dell'array con v-for -->
                          <!-- aggiungo il click per cambiare la chat attiva -->
                           <!-- aggiungo la condizione che verifica se visibe è falsa o vera ed applica d-none di conseguenza  -->
-                        <div v-for="(contact, index) in contacts" :key="index" class="contactX d-flex p-2"
+                        <div v-for="(contact, index) in contacts" :key="index" class="contactX p-2"
                         @click="clickedChat(index)"
                         :class="activeChat === index ? 'activeChat' : ''"
                         v-show="contact.visible">
@@ -94,8 +94,8 @@
                                         <div class="contactList">
                                             <!-- ciclo gli elementi dell'array con v-for -->
                                              <!-- aggiungo il click per cambiare la chat attiva -->
-                                            <div v-for="(contact, index) in contacts" class="contactX d-flex p-2" 
-                                            @click="clickedChat(index)" :class="[activeChat === index ? 'activeChat' : '', contact.visible === false ? 'd-none' : '']" data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <div v-for="(contact, index) in contacts" class="contactX p-2" 
+                                            @click="clickedChat(index)" :class="activeChat === index ? 'activeChat' : ''" data-bs-dismiss="offcanvas" aria-label="Close" v-show="contact.visible">
                                                 <!-- inserisco i dati nelle dovute destinazioni -->
                                                 <div class="contactImg">
                                                     <img :src="contact.avatar" :alt="contact.name+'-avatar'">
@@ -184,11 +184,10 @@
                         <!-- dico alla variabile newMsg dove andare a prendere il valore -->
                         <input class="w-100 p-2" type="text" name="" id="" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendNewMsg">
 
-                        <!-- CHIEDI SE ESISTE UN MODO PER FARLO COMPARIRE QUANDO INPUTE È IN FOCUS  -->
-                        <button class="btn position-absolute msgSendBtn d-none">
-                            <i class="fa-regular fa-paper-plane "></i>
+                        <button v-if="newMsg" class="btn msgIcons ms-2 me-1" @click="sendNewMsg()">
+                            <i class="fa-regular fas fa-paper-plane"></i>
                         </button>
-                        <button class="btn msgIcons ms-2">
+                        <button v-else class="btn msgIcons ms-2">
                             <i class="fa-regular fas fa-microphone"></i>
                         </button>
                     </div>
@@ -196,6 +195,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js" integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
