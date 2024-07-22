@@ -166,6 +166,10 @@ createApp({
                 'Gentilissima',
                 'Perfetto, grazie!',
                 '...',
+                'letsgoski',
+                '😀',
+                '🏀',
+                '🔥'
             ],
             // DEFINISCO LA CHAT ATTIVA
             activeChat: 0,
@@ -244,7 +248,11 @@ createApp({
             },500)
              });
         },
-        
+        // AGGIUNGO UNA FUNZIONE PER INSERIRE NELLA BARRA DI RICERCA 
+        addEmoji(emojis) {
+            // INSERISCO L'EMOJI NELLA BARRA INPUT DEI MESSAGGI
+            this.newMsg += emojis;
+        },
     
     },
 
