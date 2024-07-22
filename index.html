@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-7 msgWindow">
-                    <div class="msgHeader d-flex align-items-center justify-content-between">
+                    <div class="msgHeader d-flex align-items-center justify-content-between position-relative">
                         <div class="msgHeaderLeft">
 
                             <div class="contactMsgHeader d-flex px-2">
@@ -124,8 +124,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="msgHeaderRight">
-                            <button class="btn iconsHeader">
+                        <div class="msgHeaderRight position-relative">
+                            <!-- aggiunta chiamata al pulsante di ricerca  -->
+                            <button class="btn iconsHeader" @click="toggleSearchBar">
                                 <i class="fa-solid fas fa-magnifying-glass"></i>
                             </button>
                             <button class="btn iconsHeader">
@@ -135,7 +136,11 @@
                                 <i class="fa-solid fas fa-ellipsis-vertical"></i>
                             </button>
                         </div>
+                        <!-- barra di ricerca a comparsa al click della lente di ingrandimento -->
+                        <input type="text" v-if="showSearchBar" class="form-control position-absolute rounded-0 searchMsgStyle" placeholder="Cerca messaggio...">
                     </div>
+
+
                     <!-- riferimento a questo container per lo scroll automatico che mantiene in vista l'ultimo messaggio  -->
                     <div class="mainMsg overflow-scroll" ref="msgContainer">
                         <!-- ciclo l'oggetto messaggi dell'array e con l'operatore ternario definisco la classe da applicare in base al valore di status   -->
@@ -151,7 +156,7 @@
                                 <div class="dropup-center dropup msgMenu">
                                     <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     </button>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu p-2">
                                         <!-- aggiungo l'ascolto del click per chiamare la funzione per eleminiare il messaggio -->
                                       <li><a class="dropdown-item" @click="deleteMsg(index)">Elimina messaggio</a></li>
                                       <li><a class="dropdown-item" >Modifica messaggio</a></li>
