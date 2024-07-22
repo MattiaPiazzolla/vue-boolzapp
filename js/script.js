@@ -195,6 +195,12 @@ createApp({
                 contact.visible = contact.name.toLowerCase().includes(this.searchChat.toLowerCase());
             });
             
+        },// DEFINISCO LA FUNZIONE PER ELIMINARE I MESSAGGI
+        deleteMsg(index){
+            if(confirm('Sei sicuro di voler cancellare questo messaggio?')){
+                // VADO A PRENDERE L'ELEMENTO CHE DEVO ELIMINARE NELLA CHAT ATTIVA E GLI APPLICO SPLICE
+                this.contacts[this.activeChat].messages.splice(index, 1);
+            }
         }
     
     },
