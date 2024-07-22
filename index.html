@@ -144,6 +144,19 @@
                                 <p class="p-0 m-0 g-0" :class="message.status === 'sent' ? 'sented' : 'recived'">{{ message.message }}</p>
                                 <!-- soluzione trovata su internet, chiedi se esiste un metodo più efficiente  -->
                                 <p class="msgTime">{{ message.date.split(' ')[1].slice(0, 5) }}</p>
+
+                                <!-- aggiungo il menu a comparsa per cancellare i messaggi -->
+                                <div class="dropup-center dropup msgMenu">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <!-- aggiungo l'ascolto del click per chiamare la funzione per eleminiare il messaggio -->
+                                      <li><a class="dropdown-item" @click="deleteMsg(index)">Elimina messaggio</a></li>
+                                      <li><a class="dropdown-item" >Modifica messaggio</a></li>
+                                    </ul>
+                                  </div>
+
+
                             </div>
 
                         </div>

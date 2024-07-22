@@ -277,6 +277,26 @@ body{
     color: #01E165;
 }
 
+.msgMenu{
+    position: absolute;
+    right: 0;
+    top: -10%;
+}
+.btn:active{
+    border: none;
+}
+.btn:focus{
+    border: none;
+}
+
+.msgMenu .btn{
+    font-size: 12.5px;
+    color: rgba(152, 152, 152, 0.5);
+}
+.msgMenu .btn:hover{
+    color: rgb(0, 0, 0);
+}
+
 .hidden{
     display: none;
 }
