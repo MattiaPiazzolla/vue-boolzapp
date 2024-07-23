@@ -8,6 +8,109 @@ createApp({
             // HO AGGIUNTO IL VALORE EDIT AI MESSAGGI 
             contacts: [
                 {
+                    name: 'TEST',
+                    avatar: './img/avatar_1.jpg',
+                    visible: true,
+                    messages:[
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            message: 'BANANA!',
+                            status: 'received',
+                            edit: false,
+                            visibleMsg: false,
+                        },
+                    ]
+                },{
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
@@ -17,16 +120,19 @@ createApp({
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'Ricordati di stendere i panni',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 16:15:22',
                             message: 'Tutto fatto!',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -39,16 +145,19 @@ createApp({
                             message: 'Ciao come stai?',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '20/03/2020 16:30:55',
                             message: 'Bene grazie! Stasera ci vediamo?',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '20/03/2020 16:35:00',
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -61,16 +170,19 @@ createApp({
                             message: 'La Marianna va in campagna',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '28/03/2020 10:20:10',
                             message: 'Sicuro di non aver sbagliato chat?',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '28/03/2020 16:15:22',
                             message: 'Ah scusa!',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -83,11 +195,13 @@ createApp({
                             message: 'Lo sai che ha aperto una nuova pizzeria?',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'Si, ma preferirei andare al cinema',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -100,11 +214,13 @@ createApp({
                             message: 'Ricordati di chiamare la nonna',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'Va bene, stasera la sento',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -117,16 +233,19 @@ createApp({
                             message: 'Ciao Claudia, hai novità?',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'Non ancora',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:51:00',
                             message: 'Nessuna nuova, buona nuova',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -139,11 +258,13 @@ createApp({
                             message: 'Fai gli auguri a Martina che è il suo compleanno!',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'Grazie per avermelo ricordato, le scrivo subito!',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },{
@@ -156,16 +277,19 @@ createApp({
                             message: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:50:00',
                             message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent',
                             edit: false,
+                            visibleMsg: false,
                         },{
                             date: '10/01/2020 15:51:00',
                             message: 'OK!!',
                             status: 'received',
                             edit: false,
+                            visibleMsg: false,
                         },
                     ]
                 },
@@ -199,6 +323,8 @@ createApp({
             newMsg: '',
             // DEFINISCO UNA VARIABILE PER LA BARRA DI RICERCA 
             searchChat: '',
+            // DEFINISCO UNA VARIABILE PER LA RICERCA DEI MESSAGGI
+            searchMsg: '',
             // DEFINISCO UN'ARRAY PER LE EMOTICON
             emojis: ["😀","😃","😄","😁","😆","😅","😂","🤣","🥲","🥹","😊","😇","🙂","🙃","😉","😌","😍","🥰","😘","😗","😙","😚","😋","😛","😝","😜","🤪","🤨","🧐","🤓","😎","🥸","🤩","🥳","😏","😒","😞","😔","😟","😕","🙁","☹️","😣","😖","😫","😩","🥺","😢","😭","😮‍💨","😤","😠","😡","🤬","🤯","😳","🥵","🥶","😱","😨","😰","😥","😓","🫣","🤗","🫡","🤔","🫢","🤭","🤫","🤥","😶","😶‍🌫️","😐","😑","😬","🫨","🫠","🙄","😯","😦","😧","😮","😲","🥱","😴","🤤","😪","😵","😵‍💫","🫥","🤐","🥴","🤢","🤮","🤧","😷","🤒","🤕","🤑","🤠","😈","👿","👹","👺","🤡","💩","👻","💀","☠️","👽","👾","🤖","🎃","😺","😸","😹","😻","😼","😽","🙀","😿","😾","👋","🤚","🖐","✋","🖖","👌","🤌","🤏","✌️","🤞","🫰","🤟","🤘","🤙","🫵","🫱","🫲","🫸","🫷","🫳","🫴","👈","👉","👆","🖕","👇","👍","👎","✊","👊","🤛","🤜","👏","🫶","🙌","👐","🤲","🤝","🙏","💅","🤳","💪","🦾","🦵","🦿","🦶","👣","👂","🦻","👃","🫀","🫁","🧠","🦷","🦴","👀","👁","👅","👄","🫦","💋","🩸","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄️","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🐵","🙈","🙉","🙊","🐒","🐔","🐧","🐦","🐦‍⬛","🐤","🐣","🐥","🦆","🦅","🦉","🦇","🐺","🐗","🐴","🦄","🐝","🪱","🐛","🦋","🐌","🐞","🐜","🪰","🪲","🪳","🦟","🦗","🕷","🕸","🦂","🐢","🐍","🦎","🦖","🦕","🐙","🦑","🦐","🦞","🦀","🪼","🪸","🐡","🐠","🐟","🐬","🐳","🐋","🦈","🐊","🐅","🐆","🦓","🫏","🦍","🦧","🦣","🐘","🦛","🦏","🐪","🐫","🦒","🦘","🦬","🐃","🐂","🐄","🐎","🐖","🐏","🐑","🦙","🐐","🦌","🫎","🐕","🐩","🦮","🐕‍🦺","🐈","🐈‍⬛","🪽","🪶","🐓","🦃","🦤","🦚","🦜","🦢","🪿","🦩","🕊","🐇","🦝","🦨","🦡","🦫","🦦","🦥","🐁","🐀","🐿","🦔","🐾","🐉","🐲","🌵","🎄","🌲","🌳","🌴","🪹","🪺","🪵","🌱","🌿","☘️","🍀","🎍","🪴","🎋","🍃","🍂","🍁","🍄","🐚","🪨","🌾","💐","🌷","🪷","🌹","🥀","🌺","🌸","🪻","🌼","🌻","🌞","🌝","🌛","🌜","🌚","🌕","🌖","🌗","🌘","🌑","🌒","🌓","🌔","🌙","🌎","🌍","🌏","🪐","💫","⭐️","🌟","✨","💥","🔥","🌪","🌈","🌤","⛅️","🌥","🌦","🌧","🌩","🌨","⛄️","🌬","💨","💧","💦","🫧","🌊","⚽️","🏀","🏈","⚾️","🥎","🎾","🏐","🏉","🥏","🎱","🪀","🏓","🏸","🏒","🏑","🥍","🏏","🪃","🥅","⛳️","🪁","🏹","🎣","🤿","🥊","🥋","🎽","🛹","🛼","🛷","🥌","🎿","🏂","🪂","🏋️‍♀️","🏋️","🏋️‍♂️","🤼‍♀️","🤼","🤼‍♂️","🤸‍♀️","🤸","🤸‍♂️","⛹️‍♀️","⛹️","⛹️‍♂️","🤺","🤾‍♀️","🤾","🤾‍♂️","🏌️‍♀️","🏌️","🏌️‍♂️","🏇","🧘‍♀️","🧘","🧘‍♂️","🏄‍♀️","🏄","🏄‍♂️","🏊‍♀️","🏊","🏊‍♂️","🤽‍♀️","🤽","🤽‍♂️","🚣‍♀️","🚣","🚣‍♂️","🧗‍♀️","🧗","🧗‍♂️","🚵‍♀️","🚵","🚵‍♂️","🚴‍♀️","🚴","🚴‍♂️","🏆","🥇","🥈","🥉","🏅","🎖","🏵","🎗","🎫","🎟","🎪","🤹","🤹‍♂️","🤹‍♀️","🎭","🩰","🎨","🎬","🎤","🎧","🎼","🎹","🥁","🪘","🪇","🎷","🎺","🪗","🎸","🪕","🎻","🪈","🎲","🎯","🎳","🎮","🎰","🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🛻","🚚","🚛","🚜","🦯","🦽","🦼","🛴","🚲","🛵","🏍","🛺","🚨","🚔","🚍","🚘","🚖","🛞","🚡","🚠","🚟","🚃","🚋","🚞","🚝","🚄","🚅","🚈","🚂","🚆","🚇","🚊","🚉","✈️","🛫","🛬","🛩","💺","🛰","🚀","🛸","🚁","🛶","⛵️","🚤","🛥","🛳","🚢","⚓️","🛟","🪝","⛽️","🚧","🚦","🚥","🚏","🗺","🗿","🗽","🗼","🏰","🏯","🏟","🎡","🎢","🛝","🎠","⛲️","🏖","🏝","🏜","🌋","🏔","🗻","🏕","⛺️","🛖","🏠","🏡","🏘","🏚","🏗","🏭","🏢","🏬","🏣","🏤","🏥","🏦","🏨","🏪","🏫","🏩","💒","🏛","⛪️","🕌","🕍","🛕","🕋","🛤","🛣","🗾","🎑","🏞","🌅","🌄","🌠","🎇","🎆","🌇","🌆","🏙","🌃","🌌","🌉","🌁"],
             // AGGIUNGO UNA VARIABILE CHE MUTERA AIUTANDOMI A RENDERE VISIBILE LA BARRA DI RICERCA 
@@ -251,7 +377,8 @@ createApp({
                 contact.visible = contact.name.toLowerCase().includes(this.searchChat.toLowerCase());
             });
             
-        },// DEFINISCO LA FUNZIONE PER ELIMINARE I MESSAGGI
+        },
+        // DEFINISCO LA FUNZIONE PER ELIMINARE I MESSAGGI
         deleteMsg(index){
             if(confirm('Sei sicuro di voler cancellare questo messaggio?')){
                 // VADO A PRENDERE L'ELEMENTO CHE DEVO ELIMINARE NELLA CHAT ATTIVA E GLI APPLICO SPLICE
@@ -275,7 +402,9 @@ createApp({
         // AGGIUNGO UNA FUNZIONE PER INSERIRE NELLA BARRA DI RICERCA 
         addEmoji(emojis) {
             // INSERISCO L'EMOJI NELLA BARRA INPUT DEI MESSAGGI
-            this.newMsg += emojis;
+            setTimeout(() => {
+                this.newMsg += emojis;
+            },100)
         },
         // AGGIUNGO LA FUNZIONE PER EDITARE I MESSAGGI
         editMsg(index){
@@ -286,6 +415,30 @@ createApp({
         toggleSearchBar() {
             this.showSearchBar = !this.showSearchBar;
         },
+        filterMsg() {
+            // DEFINISCO UN CICLO FOREACH CHE CONTROLLA SE I VALORI INSERITI IN SEARCHMSG SONO CONTENUTI NEL MESSAGGIO 
+            this.contacts.forEach((contact) => {
+                contact.message.visibleMsg = this.contact[this.activeChat].messages.message.toLowerCase().includes(this.searchMsg.toLowerCase());
+                console.log()
+            });
+            
+        }, 
+        searchChatFunction() {
+            // RESETTO TUTTI I VISIBLEMSG ALL'INIZIO DELL FUNZIONE 
+            this.contacts.forEach(contact => {
+                contact.messages.forEach(message => {
+                    message.visibleMsg = false;
+                });
+            });
+
+            // CONFRONTO IL VALORE INSERITO IN searchMsg CON IL VALORE DEI MESSAGGI NELLA CHAT ATTVA
+            this.contacts[this.activeChat].messages.forEach(message => {
+                message.visibleMsg = message.message.toLowerCase().includes(this.searchMsg.toLowerCase());
+            });
+
+            // SCROLLO LA PAGINA FINO AL PRIMO MESSAGGIO CON visibleMsg = TRUE
+            
+        }
     },
 
 }).mount('#app')
