@@ -52,7 +52,7 @@
                         <!-- ciclo gli elementi dell'array con v-for -->
                          <!-- aggiungo il click per cambiare la chat attiva -->
                           <!-- aggiungo la condizione che verifica se visibe è falsa o vera ed applica d-none di conseguenza  -->
-                        <div v-for="(contact, index) in contacts" :key="index" class="contactX p-2"
+                        <div v-for="(contact, index) in contacts" class="contactX p-2"
                         @click="clickedChat(index)"
                         :class="activeChat === index ? 'activeChat' : ''"
                         v-show="contact.visible">
@@ -137,19 +137,19 @@
                             </button>
                         </div>
                         <!-- barra di ricerca a comparsa al click della lente di ingrandimento -->
-                        <input type="text" v-if="showSearchBar" class="form-control position-absolute rounded-0 searchMsgStyle" placeholder="Cerca messaggio..." v-model="searchMsg" @input="searchChatFunction">
+                        <input type="text" v-if="showSearchBar" class="form-control position-absolute rounded-0 searchMsgStyle" placeholder="Cerca messaggio..." v-model="searchMsg" @input="searchChatFunction" @keydown.enter="scrollToFirstVisibleMessage" @keyup.enter="toggleSearchBar">
                     </div>
 
 
                     <!-- riferimento a questo container per lo scroll automatico che mantiene in vista l'ultimo messaggio  -->
                     <div class="mainMsg overflow-scroll" ref="msgContainer">
                         <!-- ciclo l'oggetto messaggi dell'array e con l'operatore ternario definisco la classe da applicare in base al valore di status   -->
-                        <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" >
+                        <div v-for="(message, index) in contacts[activeChat].messages" :class="message.status === 'sent' ? 'sentMsg' : 'receivedMsg'" :id="'message-' + index" :class="contact.message.visibleMsg = true ? 'yellowBgMsg' : '' ">
                             <!-- definisco la condizione per applicare la classe dle messaggio inviao o il messaggio ricevuto -->
                             <div class="g-0 position-relative" :class="message.status === 'sent' ? 'bubbleSent' : 'bubbleRecived'" >
                                 <!-- aggiungo i dati e le classi ai messaggi in base allo status  -->
-                                 <!-- aggiungo v-if che controlla lo stato del valore edit  -->
-                                 <div v-if="!this.contacts[this.activeChat].messages.edit">
+                                 <!-- aggiungo v-if che controlla lo stato del valore edit  --> 
+                                 <div v-if="!this.contacts[this.activeChat].messages[index].edit">
                                     <!-- se edit è come di default in false, allora il messaggio rimarra invariato -->
                                      <p class="p-0 m-0 g-0" :class="message.status === 'sent' ? 'sented' : 'recived'" >{{ message.message }}</p>
                                  </div>

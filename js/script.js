@@ -401,6 +401,7 @@ createApp({
         },
         // AGGIUNGO UNA FUNZIONE PER INSERIRE NELLA BARRA DI RICERCA 
         addEmoji(emojis) {
+            console.log(emojis)
             // INSERISCO L'EMOJI NELLA BARRA INPUT DEI MESSAGGI
             setTimeout(() => {
                 this.newMsg += emojis;
@@ -408,7 +409,8 @@ createApp({
         },
         // AGGIUNGO LA FUNZIONE PER EDITARE I MESSAGGI
         editMsg(index){
-            this.contacts[this.activeChat].messages.edit = !this.contacts[this.activeChat].messages.edit;
+            this.contacts[this.activeChat].messages[index].edit = !this.contacts[this.activeChat].messages[index].edit;
+            
         },
 
         // AGGIUNGO UNA FUNZIONE PER FAR COMPARIRE LA BARRA DI RICERCA DEI MESSAGGI 
@@ -434,10 +436,24 @@ createApp({
             // CONFRONTO IL VALORE INSERITO IN searchMsg CON IL VALORE DEI MESSAGGI NELLA CHAT ATTVA
             this.contacts[this.activeChat].messages.forEach(message => {
                 message.visibleMsg = message.message.toLowerCase().includes(this.searchMsg.toLowerCase());
-            });
-
-            // SCROLLO LA PAGINA FINO AL PRIMO MESSAGGIO CON visibleMsg = TRUE
-            
+            });  
+        },
+        // TROVO IL PRIMO MESSAGGIO CHE HA IL VALORE DI VISIBLEMSG = A TRUE 
+        scrollToFirstVisibleMessage() {
+            // ATTRIBUISCO A UNA VARIABILE IL 'PERCORSO' DEL PRIMO VALORE CON VISIBLEMSG = TRUE 
+            const firstVisibleIndex = this.contacts[this.activeChat].messages.findIndex(message => message.visibleMsg === true);
+            console.log(firstVisibleIndex)
+            // CHIAMO LA FUNZIONE DI SCROLL PASSANDO LA VARIABILE COME PARAMETRO 
+            this.scrollToMessage(firstVisibleIndex);
+        },
+        
+        // FUNZIONE PER LO SCROLL 
+        scrollToMessage(index) {
+            // RECUPERO L'ELEMENTO CON X ID 
+            const messageElement = document.getElementById('message-' + index);
+            if (messageElement) {
+                messageElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     },
 
